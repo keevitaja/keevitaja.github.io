@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Publisher theme</title>
+        <meta name="description" content="Publisher is a minimal clean theme for the personal blog.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="/app.css">
+    </head>
+    <body>
+        <header class="main">
+            <nav class="mobile" data-navigation-type="container">
+                <!-- Collected navigation items from sources will be placed here by js -->
+            </nav>
+
+            <nav class="primary">
+                <div class="side-margins">
+                    <ul data-navigation-type="source">
+                        <li><a href="#">Laravel</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">Britney Spears</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <section class="main">
+                <div class="container">
+                    <a class="site-name" href="/">PUBLISHER</a>
+
+                    <a class="mobile-button" href="#" data-navigation-type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+
+                    <nav class="secondary">
+                        <ul data-navigation-type="source">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>      
+                    </nav>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section class="content">
+                <article class="main">
+                    <header class="article">
+                        <aside>29 august 2014 
+                            <span class="tags">
+                                <a href="">Laravel</a>
+                                <a href="">PHP</a>
+                            </span>
+                        </aside>
+                        <h1><a href="">This is a title about something</a></h1>
+                    </header>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio dolor inventore nulla obcaecati nostrum dolorum sequi deserunt. Esse voluptates assumenda soluta, excepturi laboriosam ad. Doloribus esse nam vel tempore consequatur.</p>
+
+                    <ul>
+                        <li><a href="#">This is first item</a></li>
+                        <li><a href="#">Second item</a></li>
+                        <li><a href="#">And the last item</a></li>
+                    </ul>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint amet earum, deleniti provident repudiandae. Sint, voluptatibus sunt, accusamus nisi, commodi amet esse impedit vitae laudantium iste tempora voluptates consectetur. Provident.</p>
+
+<pre><code>public function publish($tag)
+{
+    $posts = $this->content->getPublishedPosts($tag);
+
+    foreach ($posts as $post)
+    {
+        $this->publish($post);
+    }
+
+    return 'Everything was published!';
+}
+</code></pre>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis aliquid odio eos, exercitationem optio incidunt non earum voluptatem ad harum eligendi, vel laudantium consequuntur accusamus itaque voluptatum! Eaque, assumenda dicta.</p>
+
+                    <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi voluptas magni excepturi at eos molestiae ab voluptate, animi optio consequuntur unde odio obcaecati reiciendis inventore eaque architecto sunt atque adipisci.</blockquote>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita iure odio velit voluptatibus vel modi sed atque debitis, recusandae, ex, quidem sapiente quisquam vitae asperiores, dolor error dicta est tenetur!</p>
+
+                    <!-- <aside class="comments">
+                        Place here your Disquss script for comments!
+                    </aside> -->
+                </article>
+
+                <aside class="pagination">
+                    <ul>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li class="active"><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
+                </aside>
+            </section>
+        </main>
+
+        <footer class="main">
+            <div class="side-margins">
+                <ul>
+                    <li><a href="http://twitter.com">Twitter</a></li>
+                    <li><a href="http://github.com">Github</a></li>
+                </ul>
+            </div>
+        </footer>
+        
+        <script src="/app.js"></script>
+    </body>
+</html>
