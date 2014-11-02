@@ -5,8 +5,8 @@
     <description>Some words on various subjects. Mostly IT related!</description>
     <link>http://keevitaja.github.io/</link>
     <atom:link href="http://keevitaja.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 02 Nov 2014 23:41:46 +0200</pubDate>
-    <lastBuildDate>Sun, 02 Nov 2014 23:41:46 +0200</lastBuildDate>
+    <pubDate>Sun, 02 Nov 2014 23:45:33 +0200</pubDate>
+    <lastBuildDate>Sun, 02 Nov 2014 23:45:33 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -27,7 +27,7 @@
 
 &lt;p&gt;Generally abstraction is a good practice and so is the Repository pattern if we are working on a large scale project. The reason to have it, is simple. One day there might be a need to swap out the &lt;a href=&quot;http://laravel.com/docs/4.2/eloquent&quot;&gt;Eloquent&lt;/a&gt; with another database driver. If our database layer is abstracted the swapping process can go with less pain.&lt;/p&gt;
 
-&lt;p&gt;But how likely will we need to swap out the Eloquent? In most cases not likely. Eloquent supports many database services, including &lt;a href=&quot;http://www.mysql.com/&quot;&gt;MySQL&lt;/a&gt; and &lt;a href=&quot;http://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt;. Perhaps we would need to swap out Eloquent if we want to use &lt;a href=&quot;http://www.mongodb.org/&quot;&gt;MongoDB&lt;/a&gt; which works well with &lt;a href=&quot;http://en.wikipedia.org/wiki/Hierarchical_database_model&quot;&gt;hierarchical data&lt;/a&gt;. In most cases we can stick happily with Eloquent.&lt;/p&gt;
+&lt;p&gt;But how likely will we need to swap out the Eloquent? Eloquent supports many database services, including &lt;a href=&quot;http://www.mysql.com/&quot;&gt;MySQL&lt;/a&gt; and &lt;a href=&quot;http://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt;. Perhaps we would need to swap out Eloquent if we want to use &lt;a href=&quot;http://www.mongodb.org/&quot;&gt;MongoDB&lt;/a&gt; which works well with &lt;a href=&quot;http://en.wikipedia.org/wiki/Hierarchical_database_model&quot;&gt;hierarchical data&lt;/a&gt;. In most cases we can stick happily with Eloquent.&lt;/p&gt;
 
 &lt;h3 id=&quot;selective-abstraction-does-not-make-sense&quot;&gt;Selective abstraction does not make sense!&lt;/h3&gt;
 
