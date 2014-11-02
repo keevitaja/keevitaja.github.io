@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KEEVITAJA</title>
+    <description>Some words on various subjects. Mostly IT related!</description>
+    <link>http://keevitaja.local/</link>
+    <atom:link href="http://keevitaja.local/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 02 Nov 2014 14:50:32 +0200</pubDate>
+    <lastBuildDate>Sun, 02 Nov 2014 14:50:32 +0200</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Hello voodoo people</title>
+        <description>&lt;p&gt;Yeah, i do not know much about voodoo. So in this blog i mostly concentrate on things i do know - things like how to make some cool stuff on the web, which tools to use and of course Ubuntu Linux which i love! As i am not native a english speaker, i hope you forgive me all the spelling and styling mistakes i will make. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://keevitaja.local/2014/11/01/hello-voodoo-people.html&quot;&gt;Continue reading …&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Yeah, i do not know much about &lt;a href=&quot;http://voodoo.net&quot;&gt;voodoo&lt;/a&gt;. So in this blog i mostly concentrate on things i do know - things like how to make some cool stuff on the web, which tools to use and of course &lt;a href=&quot;http://www.ubuntu.com/&quot;&gt;Ubuntu Linux&lt;/a&gt; which i love! As i am not a &lt;a href=&quot;http://en.wikipedia.org/wiki/Estonian_language&quot;&gt;native&lt;/a&gt; english speaker, i hope you forgive me all the spelling and styling mistakes i will make.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-tech-department-of-this-blog&quot;&gt;The tech department of this blog&lt;/h3&gt;
+
+&lt;p&gt;When i started to think about creating a personal blog, the first thing i looked for was a simple theme and easy to use blog engine. I have made several webpages using &lt;a href=&quot;http://pyrocms.com&quot;&gt;PyroCMS&lt;/a&gt; and also have some experience with &lt;a href=&quot;http://wordpress.org&quot;&gt;Wordpress&lt;/a&gt;, but none of theme had a suitable theme for personal blogging. So i had to write something that suits my needs - &lt;a href=&quot;https://github.com/keevitaja/publisher&quot;&gt;Publisher theme&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To write the Publisher &lt;a href=&quot;http://www.w3.org/TR/html5/&quot;&gt;HTML5&lt;/a&gt; theme, i used tools like &lt;a href=&quot;http://sass-lang.com/&quot;&gt;Sass&lt;/a&gt;, &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;, &lt;a href=&quot;http://compass-style.org/&quot;&gt;Compass&lt;/a&gt; with its extension and other &lt;a href=&quot;https://github.com/explore&quot;&gt;open source&lt;/a&gt; projects. As i could not find a simple blog engine, i decided to use &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; static page generator. &lt;/p&gt;
+
+&lt;p&gt;In time i will blog about all these tools as on many occasions the official documentation sucks big time! Like with Jekyll i had to &lt;a href=&quot;http://google.com&quot;&gt;google&lt;/a&gt; a lot, to get the job done!&lt;/p&gt;
+
+&lt;h3 id=&quot;the-writing-department&quot;&gt;The writing department&lt;/h3&gt;
+
+&lt;p&gt;For coding i use &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime text 3&lt;/a&gt; editor with several &lt;a href=&quot;https://sublime.wbond.net/&quot;&gt;extensions&lt;/a&gt; and personal customization. For posting i use &lt;a href=&quot;http://uberwriter.wolfvollprecht.de/&quot;&gt;UberWriter&lt;/a&gt; markdown editor which is currently under &lt;a href=&quot;http://en.wikipedia.org/wiki/Heavy_metal_music&quot;&gt;heavy&lt;/a&gt; development. And yes, my OS of choice is &lt;a href=&quot;http://www.ubuntu.com/&quot;&gt;Ubuntu Linux&lt;/a&gt; 14.04 LTS. Believe it or not, but it is better than a &lt;a href=&quot;https://www.apple.com/mac/&quot;&gt;Mac&lt;/a&gt;. &lt;a href=&quot;https://www.youtube.com/watch?v=W--13mBc788&quot;&gt;Windows&lt;/a&gt; does not qualify as an operating system.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-to-expect&quot;&gt;What to expect?&lt;/h3&gt;
+
+&lt;p&gt;Expect to see lot of posts on all subjects mentioned above. Also lot of &lt;a href=&quot;http://laravel.com&quot;&gt;Laravel&lt;/a&gt; and general &lt;a href=&quot;http://php.net&quot;&gt;PHP&lt;/a&gt; stuff. It is extremely unlikely you will see here anything about &lt;a href=&quot;http://www.britneyspears.com/&quot;&gt;Britney Spears&lt;/a&gt; or &lt;a href=&quot;http://www.christinaaguilera.com/&quot;&gt;Christina Aguilera&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;If you have some comments or suggestions, leave them below, and i’ll come back to you ASAP.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 01 Nov 2014 19:07:00 +0200</pubDate>
+        <link>http://keevitaja.local/2014/11/01/hello-voodoo-people.html</link>
+        <guid isPermaLink="true">http://keevitaja.local/2014/11/01/hello-voodoo-people.html</guid>
+        
+        <category>General</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
