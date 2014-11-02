@@ -3,17 +3,17 @@
   <channel>
     <title>KEEVITAJA</title>
     <description>Some words on various subjects. Mostly IT related!</description>
-    <link>http://keevitaja.local/</link>
-    <atom:link href="http://keevitaja.local/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 02 Nov 2014 14:50:32 +0200</pubDate>
-    <lastBuildDate>Sun, 02 Nov 2014 14:50:32 +0200</lastBuildDate>
+    <link>http://keevitaja.github.io/</link>
+    <atom:link href="http://keevitaja.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 02 Nov 2014 14:56:59 +0200</pubDate>
+    <lastBuildDate>Sun, 02 Nov 2014 14:56:59 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Hello voodoo people</title>
         <description>&lt;p&gt;Yeah, i do not know much about voodoo. So in this blog i mostly concentrate on things i do know - things like how to make some cool stuff on the web, which tools to use and of course Ubuntu Linux which i love! As i am not native a english speaker, i hope you forgive me all the spelling and styling mistakes i will make. &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://keevitaja.local/2014/11/01/hello-voodoo-people.html&quot;&gt;Continue reading …&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://keevitaja.github.io/2014/11/01/hello-voodoo-people.html&quot;&gt;Continue reading …&lt;/a&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -39,8 +39,8 @@
 
 </description>
         <pubDate>Sat, 01 Nov 2014 19:07:00 +0200</pubDate>
-        <link>http://keevitaja.local/2014/11/01/hello-voodoo-people.html</link>
-        <guid isPermaLink="true">http://keevitaja.local/2014/11/01/hello-voodoo-people.html</guid>
+        <link>http://keevitaja.github.io/2014/11/01/hello-voodoo-people.html</link>
+        <guid isPermaLink="true">http://keevitaja.github.io/2014/11/01/hello-voodoo-people.html</guid>
         
         <category>General</category>
         
