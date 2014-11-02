@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Hello voodoo people | KEEVITAJA</title>
-        <meta name="description" content="Short post about this page and what it took to get it up and running.">
+        <title>Selective abstraction does not make sense | KEEVITAJA</title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -66,37 +66,41 @@
             <article class="main-article">
     <header class="article-header">
         <span class="stats">
-            01 November 2014 
+            02 November 2014 
             
-                <a href="/tags#General" class="tag">General</a>
+                <a href="/tags#Patterns" class="tag">Patterns</a>
+            
+                <a href="/tags#Laravel" class="tag">Laravel</a>
             
         </span>
 
-        <h1 class="article-title"><a href="/2014/11/01/hello-voodoo-people.html">Hello voodoo people</a></h1>
+        <h1 class="article-title"><a href="/2014/11/02/selective-abstraction.html">Selective abstraction does not make sense</a></h1>
     </header> <!-- .article-header -->
 
     <div class="article-content">
         
 
-<p>Yeah, i do not know much about <a href="http://voodoo.net">voodoo</a>. So in this blog i mostly concentrate on things i do know - things like how to make some cool stuff on the web, which tools to use and of course <a href="http://www.ubuntu.com/">Ubuntu Linux</a> which i love! As i am not a <a href="http://en.wikipedia.org/wiki/Estonian_language">native</a> english speaker, i hope you forgive me all the spelling and styling mistakes i will make.</p>
+<p>In Laravel community lot of people use <a href="http://ryantablada.com/post/the-repository-pattern-in-action">Repository pattern</a> by <a href="http://taylorotwell.com/">Taylor Otwell</a>. At the same time they have no problem with using third party packages tightly coupled to their codebase. This kind of selective abstraction makes no sense!</p>
 
-<h3 id="the-tech-department-of-this-blog">The tech department of this blog</h3>
+<h3 id="the-origin-of-repository-pattern-in-laravel">The origin of Repository pattern in Laravel.</h3>
 
-<p>When i started to think about creating a personal blog, the first thing i looked for was a simple theme and easy to use blog engine. I have made several webpages using <a href="http://pyrocms.com">PyroCMS</a> and also have some experience with <a href="http://wordpress.org">Wordpress</a>, but none of theme had a suitable theme for personal blogging. So i had to write something that suits my needs - <a href="https://github.com/keevitaja/publisher">Publisher theme</a>.</p>
+<p>Of course Taylor did not come up with the pattern itself. In his book “<a href="https://leanpub.com/laravel">From Apprentice To Artisan</a>” he talked about it and many people figured it is the right way to do things in <a href="http://laravel.com/">Laravel</a>. Did Taylor really told us to use this pattern with every application? I do not think so. Most, if not all, coding patterns are optional. To use them in our projects we have to selected them according to the projects scale and the application.</p>
 
-<p>To write the Publisher <a href="http://www.w3.org/TR/html5/">HTML5</a> theme, i used tools like <a href="http://sass-lang.com/">Sass</a>, <a href="http://gulpjs.com/">Gulp</a>, <a href="http://compass-style.org/">Compass</a> with its extension and other <a href="https://github.com/explore">open source</a> projects. As i could not find a simple blog engine, i decided to use <a href="http://jekyllrb.com/">Jekyll</a> static page generator. </p>
+<h3 id="why-should-we-consider-the-repository-pattern">Why should we consider the Repository pattern?</h3>
 
-<p>In time i will blog about all these tools as on many occasions the official documentation sucks big time! Like with Jekyll i had to <a href="http://google.com">google</a> a lot, to get the job done!</p>
+<p>Generally abstraction is a good practice and so is the Repository pattern if we are working on a large scale project. The reason to have it, is simple. One day there might be a need to swap out the <a href="http://laravel.com/docs/4.2/eloquent">Eloquent</a> with another database driver. If our database layer is abstracted the swapping process can go with less pain.</p>
 
-<h3 id="the-writing-department">The writing department</h3>
+<p>But how likely will we need to swap out the Eloquent? In most cases not likely. Eloquent supports many database services, including <a href="http://www.mysql.com/">MySQL</a> and <a href="http://www.postgresql.org/">PostgreSQL</a>. Perhaps we would need to swap out Eloquent if we want to use <a href="http://www.mongodb.org/">MongoDB</a> which works well with <a href="recursive data">recursive data</a>.</p>
 
-<p>For coding i use <a href="http://www.sublimetext.com/">Sublime text 3</a> editor with several <a href="https://sublime.wbond.net/">extensions</a> and personal customization. For posting i use <a href="http://uberwriter.wolfvollprecht.de/">UberWriter</a> markdown editor. And yes, my OS of choice is <a href="http://www.ubuntu.com/">Ubuntu Linux</a> 14.04 LTS. Believe it or not, but it is better than a <a href="https://www.apple.com/mac/">Mac</a>. <a href="https://www.youtube.com/watch?v=W--13mBc788">Windows</a> does not qualify as an operating system.</p>
+<h3 id="selective-abstraction-does-not-make-sense">Selective abstraction does not make sense!</h3>
 
-<h3 id="what-to-expect">What to expect?</h3>
+<p>I have seen too many times the following situation. Developer is using Repositories with <a href="http://laravel.com/docs/4.2/ioc">interface binding</a>. He is also using some third party packages, like image manipulator, which are not abstracted in any way. Does this make any sense?</p>
 
-<p>Expect to see lot of posts on all subjects mentioned above. Also lot of <a href="http://laravel.com">Laravel</a> and general <a href="http://php.net">PHP</a> stuff. It is extremely unlikely you will see here anything about <a href="http://www.britneyspears.com/">Britney Spears</a> or <a href="http://www.christinaaguilera.com/">Christina Aguilera</a>. </p>
+<p>And when i ask this developer why is he using Repositories, i usually do not get a straight answer. Perhaps some gibberish about Repositories being a good practice or something. Also i have seen projects that use Repositories returning the Eloquent object.</p>
 
-<p>If you have some comments or suggestions, leave them below, and i’ll come back to you ASAP.</p>
+<p><strong>This is just stupid!</strong></p>
+
+<p>Perhaps it would make sense to abstract everything and prepare for everything. To use only Repositories is 100% senseless!</p>
 
 
     </div> <!-- .article-content -->

@@ -5,15 +5,57 @@
     <description>Some words on various subjects. Mostly IT related!</description>
     <link>http://keevitaja.github.io/</link>
     <atom:link href="http://keevitaja.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 02 Nov 2014 15:40:48 +0200</pubDate>
-    <lastBuildDate>Sun, 02 Nov 2014 15:40:48 +0200</lastBuildDate>
+    <pubDate>Sun, 02 Nov 2014 19:15:00 +0200</pubDate>
+    <lastBuildDate>Sun, 02 Nov 2014 19:15:00 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Selective abstraction does not make sense</title>
+        <description>&lt;p&gt;In Laravel community lot of people use Repository pattern by Taylor Otwell and at the same time they have no problem with using third party packages tightly coupled to their codebase. This kind of selective abstraction makes no sense!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://keevitaja.github.io/2014/11/02/selective-abstraction.html&quot;&gt;Continue reading …&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;In Laravel community lot of people use &lt;a href=&quot;http://ryantablada.com/post/the-repository-pattern-in-action&quot;&gt;Repository pattern&lt;/a&gt; by &lt;a href=&quot;http://taylorotwell.com/&quot;&gt;Taylor Otwell&lt;/a&gt;. At the same time they have no problem with using third party packages tightly coupled to their codebase. This kind of selective abstraction makes no sense!&lt;/p&gt;
+
+&lt;h3 id=&quot;the-origin-of-repository-pattern-in-laravel&quot;&gt;The origin of Repository pattern in Laravel.&lt;/h3&gt;
+
+&lt;p&gt;Of course Taylor did not come up with the pattern itself. In his book “&lt;a href=&quot;https://leanpub.com/laravel&quot;&gt;From Apprentice To Artisan&lt;/a&gt;” he talked about it and many people figured it is the right way to do things in &lt;a href=&quot;http://laravel.com/&quot;&gt;Laravel&lt;/a&gt;. Did Taylor really told us to use this pattern with every application? I do not think so. Most, if not all, coding patterns are optional. To use them in our projects we have to selected them according to the projects scale and the application.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-should-we-consider-the-repository-pattern&quot;&gt;Why should we consider the Repository pattern?&lt;/h3&gt;
+
+&lt;p&gt;Generally abstraction is a good practice and so is the Repository pattern if we are working on a large scale project. The reason to have it, is simple. One day there might be a need to swap out the &lt;a href=&quot;http://laravel.com/docs/4.2/eloquent&quot;&gt;Eloquent&lt;/a&gt; with another database driver. If our database layer is abstracted the swapping process can go with less pain.&lt;/p&gt;
+
+&lt;p&gt;But how likely will we need to swap out the Eloquent? In most cases not likely. Eloquent supports many database services, including &lt;a href=&quot;http://www.mysql.com/&quot;&gt;MySQL&lt;/a&gt; and &lt;a href=&quot;http://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt;. Perhaps we would need to swap out Eloquent if we want to use &lt;a href=&quot;http://www.mongodb.org/&quot;&gt;MongoDB&lt;/a&gt; which works well with &lt;a href=&quot;recursive data&quot;&gt;recursive data&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;selective-abstraction-does-not-make-sense&quot;&gt;Selective abstraction does not make sense!&lt;/h3&gt;
+
+&lt;p&gt;I have seen too many times the following situation. Developer is using Repositories with &lt;a href=&quot;http://laravel.com/docs/4.2/ioc&quot;&gt;interface binding&lt;/a&gt;. He is also using some third party packages, like image manipulator, which are not abstracted in any way. Does this make any sense?&lt;/p&gt;
+
+&lt;p&gt;And when i ask this developer why is he using Repositories, i usually do not get a straight answer. Perhaps some gibberish about Repositories being a good practice or something. Also i have seen projects that use Repositories returning the Eloquent object.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;This is just stupid!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Perhaps it would make sense to abstract everything and prepare for everything. To use only Repositories is 100% senseless!&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 02 Nov 2014 02:00:00 +0200</pubDate>
+        <link>http://keevitaja.github.io/2014/11/02/selective-abstraction.html</link>
+        <guid isPermaLink="true">http://keevitaja.github.io/2014/11/02/selective-abstraction.html</guid>
+        
+        <category>Patterns</category>
+        
+        <category>Laravel</category>
+        
+        
+      </item>
     
       <item>
         <title>Hello voodoo people</title>
         <description>&lt;p&gt;Yeah, i do not know much about voodoo. So in this blog i mostly concentrate on things i do know - things like how to make some cool stuff on the web, which tools to use and of course Ubuntu Linux which i love! As i am not native a english speaker, i hope you forgive me all the spelling and styling mistakes i will make. &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://keevitaja.github.io/2014/11/01/hello-voodoo-people.html&quot;&gt;Continue reading …&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/2014/11/01/hello-voodoo-people.html&quot;&gt;Continue reading …&lt;/a&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
