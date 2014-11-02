@@ -5,8 +5,8 @@
     <description>Some words on various subjects. Mostly IT related!</description>
     <link>http://keevitaja.github.io/</link>
     <atom:link href="http://keevitaja.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 02 Nov 2014 19:27:24 +0200</pubDate>
-    <lastBuildDate>Sun, 02 Nov 2014 19:27:24 +0200</lastBuildDate>
+    <pubDate>Sun, 02 Nov 2014 23:28:34 +0200</pubDate>
+    <lastBuildDate>Sun, 02 Nov 2014 23:28:34 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -21,7 +21,7 @@
 
 &lt;h3 id=&quot;the-origin-of-repository-pattern-in-laravel&quot;&gt;The origin of Repository pattern in Laravel.&lt;/h3&gt;
 
-&lt;p&gt;Of course Taylor did not come up with the pattern itself. In his book “&lt;a href=&quot;https://leanpub.com/laravel&quot;&gt;From Apprentice To Artisan&lt;/a&gt;” he talked about it and many people figured it is the right way to do things in &lt;a href=&quot;http://laravel.com/&quot;&gt;Laravel&lt;/a&gt;. Did Taylor really told us to use this pattern with every application? I do not think so. Most, if not all, coding patterns are optional. To use them in our projects we have to selected them according to the projects scale and the application.&lt;/p&gt;
+&lt;p&gt;Of course Taylor did not come up with the pattern itself. In his book “&lt;a href=&quot;https://leanpub.com/laravel&quot;&gt;From Apprentice To Artisan&lt;/a&gt;” he talked about it and many people figured it is the right way to do things in &lt;a href=&quot;http://laravel.com/&quot;&gt;Laravel&lt;/a&gt;. Did Taylor really tell us to use this pattern with each application? I do not think so. Most, if not all, coding patterns are optional. To use different patterns in our projects we have to selected them according to the projects scale and the application.&lt;/p&gt;
 
 &lt;h3 id=&quot;why-should-we-consider-the-repository-pattern&quot;&gt;Why should we consider the Repository pattern?&lt;/h3&gt;
 
