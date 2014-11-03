@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Hello voodoo people | KEEVITAJA</title>
-        <meta name="description" content="Short post about this page and what it took to get it up and running.">
+        <title>How to auto-initialize constructor parameters in Sublime Text 3 | KEEVITAJA</title>
+        <meta name="description" content="Tutorial on how to auto-initialize constructor parameters in Sublime Text 3">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -68,37 +68,61 @@
             <article class="main-article">
     <header class="article-header">
         <span class="stats">
-            01 November 2014 
+            03 November 2014 
             
-                <a href="/tags#General" class="tag">General</a>
+                <a href="/tags#Editors" class="tag">Editors</a>
             
         </span>
 
-        <h1 class="article-title"><a href="/2014/11/01/hello-voodoo-people.html">Hello voodoo people</a></h1>
+        <h1 class="article-title"><a href="/2014/11/03/auto-initialize-constructor-parameters.html">How to auto-initialize constructor parameters in Sublime Text 3</a></h1>
     </header> <!-- .article-header -->
 
     <div class="article-content">
         
 
-<p>Yeah, i do not know much about <a href="http://voodoo.net">voodoo</a>. So in this blog i mostly concentrate on things i do know - things like how to make some cool stuff on the web, which tools to use and of course <a href="http://www.ubuntu.com/">Ubuntu Linux</a> which i love! As i am not a <a href="http://en.wikipedia.org/wiki/Estonian_language">native</a> english speaker, i hope you forgive me all the spelling and styling mistakes i will make.</p>
+<p>Have you ever wondered, if it is possible to auto-initialize the constructor parameters in <a href="http://www.sublimetext.com/">Sublime Text</a> as it can be done with <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a>? Wonder no more, because i have a perfect solution in the form of a macro and keymap.</p>
 
-<h3 id="the-tech-department-of-this-blog">The tech department of this blog</h3>
+<p><a href="https://gist.github.com/keevitaja/94ec7edcb1322d3a44bb">Download the initialization macro</a></p>
 
-<p>When i started to think about creating a personal blog, the first thing i looked for was a simple theme and easy to use blog engine. I have made several webpages using <a href="http://pyrocms.com">PyroCMS</a> and also have some experience with <a href="http://wordpress.org">Wordpress</a>, but none of theme had a suitable theme for personal blogging. So i had to write something that suits my needs - <a href="https://github.com/keevitaja/publisher">Publisher theme</a>.</p>
+<p>Place the macro under the Sublime User folder. In <a href="http://www.ubuntu.com/">Ubuntu</a> the correct path is:</p>
 
-<p>To write the Publisher <a href="http://www.w3.org/TR/html5/">HTML5</a> theme, i used tools like <a href="http://sass-lang.com/">Sass</a>, <a href="http://gulpjs.com/">Gulp</a>, <a href="http://compass-style.org/">Compass</a> with its extension and other <a href="https://github.com/explore">open source</a> projects. As i could not find a simple blog engine, i decided to use <a href="http://jekyllrb.com/">Jekyll</a> static page generator. </p>
+<pre><code>~/.config/sublime-text-3/Packages/User
+</code></pre>
 
-<p>In time i will blog about all these tools as on many occasions the official documentation sucks big time! Like with Jekyll i had to <a href="http://google.com">google</a> a lot, to get the job done!</p>
+<p>If you do not know the right path, click <em>Perferences &gt; Browse packages</em> in sublime menu and packages folder should open.</p>
 
-<h3 id="the-writing-department">The writing department</h3>
+<p>Store the key binding in the default user keymap file.</p>
 
-<p>For coding i use <a href="http://www.sublimetext.com/">Sublime text 3</a> editor with several <a href="https://sublime.wbond.net/">extensions</a> and personal customization. For posting i use <a href="http://uberwriter.wolfvollprecht.de/">UberWriter</a> markdown editor. And yes, my OS of choice is <a href="http://www.ubuntu.com/">Ubuntu Linux</a> 14.04 LTS. Believe it or not, but it is better than a <a href="https://www.apple.com/mac/">Mac</a>. <a href="https://www.youtube.com/watch?v=W--13mBc788">Windows</a> does not qualify as an operating system.</p>
+<pre><code>{ 
+    "keys": ["ctrl+i"], 
+    "command": "run_macro_file", 
+    "args": {"file": "res://Packages/User/initialize_properties.sublime-macro"} 
+}
+</code></pre>
 
-<h3 id="what-to-expect">What to expect?</h3>
+<p>Place your cursor on the parameter inside the constructor and press ctrl+i. If everything is set correctly, you should see the same result as in the example below:</p>
 
-<p>Expect to see lot of posts on all subjects mentioned above. Also lot of <a href="http://laravel.com">Laravel</a> and general <a href="http://php.net">PHP</a> stuff. It is extremely unlikely you will see here anything about <a href="http://www.britneyspears.com/">Britney Spears</a> or <a href="http://www.christinaaguilera.com/">Christina Aguilera</a>. </p>
+<pre><code>// before
+public function __construct($property)
+{
+}
 
-<p>If you have some comments or suggestions, leave them below, and i’ll come back to you ASAP.</p>
+// after ctrl+i
+protected $property;
+
+public function __construct($property)
+{
+	$this-&gt;property = $property;
+}
+</code></pre>
+
+<p>You have to initialize each field as macro cannot do them all in one swing.</p>
+
+<h3 id="how-did-i-come-up-with-this">How did i come up with this?</h3>
+
+<p>With trial and error. Lot of help came from the default keymap file. Also i googled for some example macros and took it from there. Sublime has this <a href="http://sublimetext.info/docs/en/extensibility/macros.html"><em>record macro</em></a> feature, but it does not work. In my case it recorded something totally different from what i was doing.</p>
+
+<p>I hope this is helping you in your quest to be a faster coder. If you have comments or addition information feel free to leave them below!</p>
 
 
     </div> <!-- .article-content -->

@@ -5,9 +5,71 @@
     <description>Some words on various subjects. Mostly IT related!</description>
     <link>http://keevitaja.github.io/</link>
     <atom:link href="http://keevitaja.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 02 Nov 2014 23:45:33 +0200</pubDate>
-    <lastBuildDate>Sun, 02 Nov 2014 23:45:33 +0200</lastBuildDate>
+    <pubDate>Mon, 03 Nov 2014 16:16:33 +0200</pubDate>
+    <lastBuildDate>Mon, 03 Nov 2014 16:16:33 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>How to auto-initialize constructor parameters in Sublime Text 3</title>
+        <description>&lt;p&gt;Have you ever wondered, if it is possible to auto-initialize the constructor parameters in Sublime Text as it can be done with PhpStorm? Wonder no more, because i have a perfect solution in the form of a macro and key binding.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;2014/11/03/auto-initialize-constructor-parameters.html&quot;&gt;Continue reading …&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Have you ever wondered, if it is possible to auto-initialize the constructor parameters in &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; as it can be done with &lt;a href=&quot;https://www.jetbrains.com/phpstorm/&quot;&gt;PhpStorm&lt;/a&gt;? Wonder no more, because i have a perfect solution in the form of a macro and keymap.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/keevitaja/94ec7edcb1322d3a44bb&quot;&gt;Download the initialization macro&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Place the macro under the Sublime User folder. In &lt;a href=&quot;http://www.ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt; the correct path is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~/.config/sublime-text-3/Packages/User
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you do not know the right path, click &lt;em&gt;Perferences &amp;gt; Browse packages&lt;/em&gt; in sublime menu and packages folder should open.&lt;/p&gt;
+
+&lt;p&gt;Store the key binding in the default user keymap file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ 
+    &quot;keys&quot;: [&quot;ctrl+i&quot;], 
+    &quot;command&quot;: &quot;run_macro_file&quot;, 
+    &quot;args&quot;: {&quot;file&quot;: &quot;res://Packages/User/initialize_properties.sublime-macro&quot;} 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Place your cursor on the parameter inside the constructor and press ctrl+i. If everything is set correctly, you should see the same result as in the example below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// before
+public function __construct($property)
+{
+}
+
+// after ctrl+i
+protected $property;
+
+public function __construct($property)
+{
+	$this-&amp;gt;property = $property;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You have to initialize each field as macro cannot do them all in one swing.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-did-i-come-up-with-this&quot;&gt;How did i come up with this?&lt;/h3&gt;
+
+&lt;p&gt;With trial and error. Lot of help came from the default keymap file. Also i googled for some example macros and took it from there. Sublime has this &lt;a href=&quot;http://sublimetext.info/docs/en/extensibility/macros.html&quot;&gt;&lt;em&gt;record macro&lt;/em&gt;&lt;/a&gt; feature, but it does not work. In my case it recorded something totally different from what i was doing.&lt;/p&gt;
+
+&lt;p&gt;I hope this is helping you in your quest to be a faster coder. If you have comments or addition information feel free to leave them below!&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 03 Nov 2014 02:00:00 +0200</pubDate>
+        <link>http://keevitaja.github.io/2014/11/03/auto-initialize-constructor-parameters.html</link>
+        <guid isPermaLink="true">http://keevitaja.github.io/2014/11/03/auto-initialize-constructor-parameters.html</guid>
+        
+        <category>Editors</category>
+        
+        
+      </item>
     
       <item>
         <title>Selective abstraction does not make sense</title>
