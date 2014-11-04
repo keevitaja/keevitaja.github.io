@@ -5,15 +5,102 @@
     <description>Some words on various subjects. Mostly IT related!</description>
     <link>http://keevitaja.github.io/</link>
     <atom:link href="http://keevitaja.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 03 Nov 2014 16:16:33 +0200</pubDate>
-    <lastBuildDate>Mon, 03 Nov 2014 16:16:33 +0200</lastBuildDate>
+    <pubDate>Tue, 04 Nov 2014 10:57:56 +0200</pubDate>
+    <lastBuildDate>Tue, 04 Nov 2014 10:57:56 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>How to handle the HTTP responses in Laravel using Command Pattern</title>
+        <description>&lt;p&gt;There are many ways to handle the HTTP responses. It all comes down to a personal preference. One cool way to go is a solution where we use a class constant as the status from the Command Bus. Then we select the correct response using the status and return it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/2014/11/04/http-responses-laravel-command-patter.html&quot;&gt;Continue reading …&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;There are many ways to handle the &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_HTTP_status_codes&quot;&gt;HTTP responses&lt;/a&gt;. It all comes down to a personal preference. One cool way to go is a solution where we use a &lt;a href=&quot;http://php.net/manual/en/language.oop5.constants.php&quot;&gt;class constant&lt;/a&gt; as the status from the &lt;a href=&quot;https://laracasts.com/series/commands-and-domain-events/episodes/2&quot;&gt;Command Bus&lt;/a&gt;. Then we select the correct response using the status and return it.  &lt;/p&gt;
+
+&lt;p&gt;The benefit of taking this approach is highly readable code which gives us more flexibility than just using a boolean or a string.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The following solution can also be used without the Command Pattern. For the example a Service may return this type of status!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The goal is to store the status as a constant inside a dedicated class. Class constant is not required to have a value, but it makes sense to assign &lt;a href=&quot;http://laravel.com/docs/master/localization&quot;&gt;i18n&lt;/a&gt; slug to it. We will see the huge benefit in the Controller class!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class DrinkBeerCommandStatus {
+
+    const BOTTLE_EMPTY = 'responses.bottle.empty';
+    const SUBJECT_DRUNK = 'responses.subject.drunk';
+    const SNACKS_MISSING = 'responses.snacks.missing';
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the Command Handler we do our tasks, fire events and finally return the appropriate status.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class DrinkBeerCommandHandler {
+
+    public function handle($command)
+    {
+        try
+        {
+            $this-&amp;gt;drink($command-&amp;gt;subject);
+        }
+        catch (BottleException $e)
+        {
+            return DrinkBeerCommandStatus::BOTTLE_EMPTY;
+        }
+        catch (FoodException $e)
+        {
+            return DrinkBeerCommandStatus::SNACKS_MISSING;
+        }
+        
+        return DrinkBeerCommandStatus::SUBJECT_DRUNK;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In each case we get the correct status from the handler executed by the Command Bus. Again there are many ways how to proceed, but using the status inside a switch statement gives us the maximum amount of benefit we can get!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class DrinkingController {
+
+    public function drink()
+    {
+        $status = $this-&amp;gt;commandBus-&amp;gt;execute($command);
+
+        switch ($status)
+        {
+            case DrinkBeerCommandStatus::BOTTLE_EMPTY:
+            case DrinkBeerCommandStatus::SNACKS_MISSING:
+                return redirect('seek')-&amp;gt;withMessage(trans($status));
+            case DrinkBeerCommandStatus::SUBJECT_DRUN:
+                return redirect('sleep');
+
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using a class constant as the status with a i18n slug assigned to it, gives us huge flexibility with highly readable code. There are no comments needed! If the bottle was empty or there were no snacks, we need to seek for new resources. If we drank lot of beer it is time to sleep!&lt;/p&gt;
+
+&lt;p&gt;The pseudo code above uses Laravel 5 helpers.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 04 Nov 2014 02:00:00 +0200</pubDate>
+        <link>http://keevitaja.github.io/2014/11/04/http-responses-laravel-command-patter.html</link>
+        <guid isPermaLink="true">http://keevitaja.github.io/2014/11/04/http-responses-laravel-command-patter.html</guid>
+        
+        <category>Laravel</category>
+        
+        <category>Patterns</category>
+        
+        
+      </item>
     
       <item>
         <title>How to auto-initialize constructor parameters in Sublime Text 3</title>
         <description>&lt;p&gt;Have you ever wondered, if it is possible to auto-initialize the constructor parameters in Sublime Text as it can be done with PhpStorm? Wonder no more, because i have a perfect solution in the form of a macro and key binding.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;2014/11/03/auto-initialize-constructor-parameters.html&quot;&gt;Continue reading …&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/2014/11/03/auto-initialize-constructor-parameters.html&quot;&gt;Continue reading …&lt;/a&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
